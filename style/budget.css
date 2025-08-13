@@ -1,0 +1,158 @@
+*{
+    border: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+ background-color:black;
+ color: white;
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 100vh;
+}
+.Income{
+    padding: 1rem;
+    background-color:  #FFFDE7;
+    width: 80%;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 10px;
+}
+.Income span{
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: 200;
+}
+.SpendsAndAmoutLeft{
+    display: flex;
+    width: 80%;
+    gap: 1rem;
+}
+.SpendsAndAmoutLeft .available ,
+.SpendsAndAmoutLeft .spent{
+ width: 50%;
+ background-color: #1E1E1E;
+ color: white;
+ text-align: center;
+ font-size: 20px;
+ display: flex;
+ flex-direction: column;
+ gap: .5rem;
+ padding: 1rem;
+ border-radius: 10px;
+}
+/* || chart  */
+.chart{
+    width: 80%;
+}
+.SpendsAndAmoutLeft .available span{
+    color: #51D289;
+}
+.SpendsAndAmoutLeft .spent span{
+    color:#FFE600 ;
+}
+.UserButtons{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+    gap: 1rem;
+}
+.AddExpence{
+    border-radius: 50%;
+    width: 60px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    height: 60px;
+}
+.UserButtonsReset{
+    width: 90%;
+}
+.BudgetSections{
+     width: 100%;
+     display: flex;
+     align-items: center;
+     margin: auto;
+     justify-content: center;
+     gap: 1rem;
+
+}
+.CardContainer{
+   width: 100%;
+   max-width: 25%;
+   min-width: 200px;
+   min-height: 70vh;
+   max-height: 70vh;
+   height: 100%;
+   background-color: white;
+   color: black;
+   padding: 1rem;
+   border-radius: 15px;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   gap: 1rem;
+}
+/* || universal buttons */
+ button{
+    padding: 1rem;
+    background-color: #FFE600;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.Option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+.Option img{
+ width: 70px;
+ height: 70px;
+ border: solid #51D289 .6rem;
+ border-radius: 50%;
+}
+ hr{
+  border: solid #B2B2B2 1px; 
+  border-style: dotted;
+  max-width: 80%; 
+  width: 100%;
+ }
+
+.Optioncontianer{
+    text-align: center;
+    width: 80%;
+    max-width: 80%;
+    background-color: #FFFDE7;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: auto;
+}
+.CardOptions{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.Optioncontianer button{
+  background-color: #51D289;
+  padding: .5rem;
+  border-radius: 25px;
+}
+.UserGoals{
+    min-height: 5px;
+    width: 80%; 
+}
+.UserGoals span{
+ border-left: solid #51D289 .6rem;
+ margin-top: 1rem;
+ text-align: start;
+ padding: 1rem;
+ font-size: 20px;
+}
