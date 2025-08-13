@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="/style/budget.css">
+</head>
+<body>
+   <header>
+
+   </header> 
+
+   <section class="BudgetSections">
+     <div> waiting</div>
+
+     <div class="CardContainer">
+        <h1>Calculation</h1>
+          <hr class="line">
+        <div class="Income">
+            <h3>Income</h3>
+             <span>£2,700.00</span>
+        </div>
+        <div class="chart">
+          <canvas id="myChart"></canvas>
+        </div>
+        <div class="SpendsAndAmoutLeft">
+            <div class="available">
+                <h2>available</h2>
+                <span>£2,000.00</span>
+            </div>
+            <div class="spent">
+                <h2>spent</h2>
+                <span>£800,00</span>
+            </div>
+           
+            
+        </div>
+           <hr class="line">
+    <div class="UserButtons">
+               <button class="UserButtonsReset">reset expenses</button> 
+               <button class="AddExpence"><img src="/src/icons/icon plus (1).png" alt=""></button>
+               </div>
+     </div>
+     <div class="CardContainer CardOptions">
+        <h1>Optionals</h1>
+          <hr class="line">
+        <!-- || Optionalcaontianer to be selected be the user -->
+          <div class="Optioncontianer">
+        <h2>choose any fix expenses</h2>
+         <!--  optional chioces -->
+        <div class="Option">
+        <img src="/src/icons/NETFLIX.png" alt="">
+        <button>select</button>
+      </div>
+       <div class="Option">
+        <img src="/src/icons/SPOTIFY.png" alt="">
+        <button>select</button>
+      </div>
+       <div class="Option">
+        <img src="/src/icons/AMAZON.png" alt="">
+        <button>select</button>
+      </div>
+       <div class="Option">
+        <img src="/src/icons/GOOGLE.png" alt="">
+        <button>select</button>
+      </div> <div class="Option">
+        <img src="/src/icons/FACEBOOK.png" alt="">
+        <button>select</button>
+      </div>
+ </div>
+       <hr class="line">
+      <!-- || users Goals  -->
+       <div class="UserGoals">
+        <h2>Goals</h2>  
+         <span>"Save 10% of this amount entered this month from my salary"</span>
+        </div>  
+     </div>
+     
+     </div>
+   
+   </section>
+       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+       <script src="script/chart.js" ></script>
+</body>
+</html>
