@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.container{
+  display: flex;
+  width: 1350px;
+  height: 675px;
+  border-radius: 1px 2px;
+  background-color: #404040;
+  border: 1px solid #ffffff;
+  margin-top: 50px;
+}
+.content{
+background-image: url(/src/images/illustration.png);
+background-size: 500px;
+background-repeat: no-repeat;
+background-position: bottom;
+background-color: white;
+width: 703px;
+  height: 563px;
+  margin-top: 50px;
+}
+.content h1{
+    color: blue;
+    margin-left: 30px;
+    margin-top: 10px;
+     font-size: 30px;
+     font-family: arial;
+}
+   
