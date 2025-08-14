@@ -1,0 +1,109 @@
+
+* {
+  padding: 0;
+  margin: 0;
+}
+.container{
+  display: flex;
+  width: 1350px;
+  height: 1085px;
+  border-radius: 1px 2px;
+  background-color: #404040;
+  border: 1px solid #ffffff;
+  margin-top: 50px;
+}
+.content{
+  background-color: white;
+  width: 703px;
+  height: 563px;
+  margin-top: 50px;
+}
+.content-1{
+  background-color:black;
+  width: 703px;
+  height: 563px;
+  margin-top: 50px;
+  
+}
+.content-1 h1{
+  color: white;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+.content-1 h2{
+  color: white;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.form{
+  position: relative;
+  margin: 20px 0;
+  margin-top: 20px;
+}
+
+.form input {
+  width: 60%;
+  margin-left: 100px;
+  border: none;
+  border-bottom: 2px solid #aaa;
+  outline: none;
+  font-size: 16px;
+  color: white;
+  padding: 8px 0;
+  background: transparent;
+  background-color: black;
+
+}
+
+.form label {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  color: #aaa;
+  pointer-events: visible;
+  transition: 0.2s ease all;
+  margin-left: 100px;
+}
+
+.form input:focus + label,
+.form input:valid + label {
+  top: -16px;
+  font-size: 12px;
+  color: #333;
+}
+
+
+
+
+.form label {
+  position: absolute;
+  top: 8px;
+  left: 70px;
+  color: #aaa;
+
+}
+.container button{
+  margin-left: 100px;
+  margin-top: 50px;
+  width: 50%;
+  height: 50px;
+  background-color: gold;
+  color: black;
+  border: none;
+  border-radius: 10px;
+}
+.heading {
+  margin-left: 100px;
+  display: flex;
+  margin-top: -100px;
+}
+.heading span{
+  margin-top: 150px;
+  gap: 20px;
+  display: flex;
+}
+.heading h2{
+  color: green;
+  margin-left: -0px;
+}
