@@ -9,10 +9,130 @@ body{
  color: white;
  width: 100%;
  display: flex;
+ flex-direction: column;
  align-items: center;
  justify-content: center;
  height: 100vh;
 }
+/* header by precious */
+header{
+    max-width: 1470px;
+    width: 100%;
+}
+nav{
+    display: flex;
+    max-width: 90%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+     border-bottom: solid white 1px;
+     padding-bottom: 2rem;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 1rem;
+}
+.exp{
+    color: #FFE600;
+   
+}
+h2{
+    color: #fff;
+     font-weight: bold;
+    font-size: 40px;
+}
+.pex{
+    color: #51D289;
+}
+.nav{
+    display: flex;
+    gap: 1rem;
+    height: 53px;   
+    align-items: center;
+   
+ 
+}
+.newEx{
+    border-radius: 3px;
+    width: 220px;
+    height: 40px;
+    text-align: center;
+    padding: 0;
+
+}
+.welEx{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.expenseContainer{
+
+       width: 100%;
+   max-width: 35%;
+   min-width: 200px;
+   min-height: 70vh;
+   max-height: 70vh;
+   height: 100%;
+   background-color: black;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   gap: 3rem;
+   
+}
+.budSec{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.Description{
+    color: #FFE600;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+select{
+    background-color: black;
+    color:  #FFE600;
+    font-weight: bold;
+}
+.filter{
+    border:  1px solid #FFE600;
+    padding: 0.5rem;
+}
+.filter span{
+    border-right: solid white 1px;
+    padding-right: .5rem;
+    font-weight: bold;
+}
+.budget{
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    text-align: center;
+}
+.budget .expens{
+    color: #51D289;
+}
+.getStarted{
+    font-size: 23px;
+    max-width: 80%;
+    text-align: center;
+}
+.getStarted span{
+    color: #51D289;
+}
+.expenseContainer img{
+   width: 50px;
+   font-weight: 900;
+   font-size: 40px;
+}
+
 .Income{
     padding: 1rem;
     background-color:  #FFFDE7;
@@ -149,6 +269,7 @@ body{
     width: 80%;
     max-width: 80%;
     min-width: 300px;
+    color: black;
     background-color: #FFFDE7;
     border-radius: 10px;
     padding: .5rem;
@@ -158,6 +279,7 @@ body{
     text-align: center;
     display: flex;
     flex-direction: column;
+    color: black;
     align-items: center;
     
 }
