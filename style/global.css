@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 93d089fa88c6415a7b63387a9ac78d50ab27791d
 * {
   padding: 0;
   margin: 0;
@@ -6,13 +11,18 @@
 .container{
   display: flex;
   width: 1350px;
+<<<<<<< HEAD
   height: 1085px;
+=======
+  height: 675px;
+>>>>>>> 93d089fa88c6415a7b63387a9ac78d50ab27791d
   border-radius: 1px 2px;
   background-color: #404040;
   border: 1px solid #ffffff;
   margin-top: 50px;
 }
 .content{
+<<<<<<< HEAD
   background-color: white;
   width: 703px;
   height: 563px;
@@ -107,3 +117,28 @@
   color: green;
   margin-left: -0px;
 }
+=======
+background-image: url(/src/images/illustration.png);
+background-size: 500px;
+background-repeat: no-repeat;
+background-position: bottom;
+background-color: white;
+width: 703px;
+  height: 563px;
+  margin-top: 50px;
+}
+.content h1{
+    margin-left: 100px;
+     margin-top: 150px;
+     font-size: i8px;
+      text-align: left;
+      font-family: Arial,sans-serif;
+      font-style: italic;
+       color: black;
+      opacity: 0.7; /*add a slanting effect*/
+      transform: skew(-5deg);/* add a subtle slant*/
+      font-weight: lighter;
+}
+   
+>>>>>>> upstream
+>>>>>>> 93d089fa88c6415a7b63387a9ac78d50ab27791d
