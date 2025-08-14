@@ -16,7 +16,9 @@ body{
 .Income{
     padding: 1rem;
     background-color:  #FFFDE7;
-    width: 80%;
+    max-width: 80%;
+    min-width: 300px;
+    width: 100%;
     font-size: 16px;
     text-align: center;
     border-radius: 10px;
@@ -26,6 +28,7 @@ body{
     font-size: 30px;
     font-weight: 200;
 }
+
 .SpendsAndAmoutLeft{
     display: flex;
     width: 80%;
@@ -46,7 +49,24 @@ body{
 }
 /* || chart  */
 .chart{
-    width: 80%;
+    max-width: 200px;
+  width: 100%;
+  display: flex;
+ justify-content: center;
+ align-items: center;
+   position: relative;
+
+}
+.ChartSpent{
+   position: absolute;
+    text-align: center;
+}
+.ChartSpent span{
+  font-size: 30px;
+  font-weight: 600;
+}
+.ChartSpent h3{
+    font-weight: 300;
 }
 .SpendsAndAmoutLeft .available span{
     color: #51D289;
@@ -84,7 +104,7 @@ body{
 .CardContainer{
    width: 100%;
    max-width: 25%;
-   min-width: 200px;
+   min-width: 350px;
    min-height: 70vh;
    max-height: 70vh;
    height: 100%;
@@ -128,9 +148,10 @@ body{
     text-align: center;
     width: 80%;
     max-width: 80%;
+    min-width: 300px;
     background-color: #FFFDE7;
     border-radius: 10px;
-    padding: 1rem;
+    padding: .5rem;
     margin: auto;
 }
 .CardOptions{
@@ -149,10 +170,13 @@ body{
     min-height: 5px;
     width: 80%; 
 }
-.UserGoals span{
+.UserGoals div{
  border-left: solid #51D289 .6rem;
  margin-top: 1rem;
+ height: 40px;
+ max-width: 400px;
+ padding-left: .6rem;
+ border-radius: 15px;
  text-align: start;
- padding: 1rem;
- font-size: 20px;
+ font-size: 15px;
 }
