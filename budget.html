@@ -7,12 +7,43 @@
     <link rel="stylesheet" href="/style/budget.css">
 </head>
 <body>
-   <header>
-
+     <header>
+    <nav>
+      <div class="logo">
+        <img src="/src/icons/monthly budget.png">
+        <div class="month">
+        <p class="exp">Expense</p>
+        <h2>Monthly <span class="pex">Budget</span></h2>
+        </div>
+      </div>
+      <div class="nav">
+        <button class="newEx">New Expense</button>
+        <div class="welEx">
+          <img src="/src/icons/Welcome.png">
+          <p>Welcome Alexandre</p>
+        </div>
+      </div>
+    </nav>
    </header> 
 
    <section class="BudgetSections">
-     <div> waiting</div>
+   <div class="expenseContainer">
+     <div class="budSec"> 
+      <p class="Description">Description</p>
+      <div class="filter"><span> Filter Expenses</span>
+         <select name="selection" id="selection">
+          <option value="All">All</option>
+          <option value="Daily">Daily</option>
+          <option value="Weekly">Weekly</option>
+          <option value="Monthly">Monthly</option>
+          <option value="Yearly">Yearly</option>
+         </select></div>
+     </div>
+     <p class="budget">Looks like you haven't Added Any <span class="expens">Expenses Yet.</span></p>
+     <p class="getStarted">No Worries, Just Hit The <span>'Add'</span> Button To 
+      Get Started</p>
+    <img src="/src/icons/cart@2x.png">
+    </div>
 
      <div class="CardContainer">
         <h1>Calculation</h1>
@@ -53,7 +84,7 @@
           <hr class="line">
         <!-- || Optionalcaontianer to be selected be the user -->
           <div class="Optioncontianer">
-        <h2>choose any fix expenses</h2>
+        <h3 style="color: black;">choose any fix expenses</h3>
          <!--  optional chioces -->
         <div class="Option">
         <img src="/src/icons/NETFLIX.png" alt="">
