@@ -21,18 +21,14 @@ body{
   margin-top: 50px;
 }
 .content{
-  background-color: white;
-  width: 703px;
-  background-image: url(/src/images/illustration.png);
-background-size: 500px;
-background-repeat: no-repeat;
-background-position: bottom;
 background-color: white;
 width: 703px;
-  height: 563px;
-  margin-top: 50px;
-  height: 563px;
-  margin-top: 50px;
+background-image: url(/src/images/illustration.png);
+background-size: 500px;
+background-repeat: no-repeat;
+background-position: right bottom;
+background-color: white;
+width: 703px; 
 }
 .content-1{
   background-color:black;
