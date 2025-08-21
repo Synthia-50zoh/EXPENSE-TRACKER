@@ -1,18 +1,56 @@
+ import localStorageData from "../script/utility/localstarage.js";
 const form = document.querySelector("form");
 const AddExpense = document.querySelector(".AddExpence ");
 const AddExpenceNav= document.querySelector(".AddExpenceData");
+const selectButton = document.querySelectorAll(".selectButton");
 const exitIcons = document.querySelector(".exit-icons");
 const actions = document.querySelector(".actions");
 const resetButton = document.querySelector(".UserButtonsReset")
 const input  = document.querySelectorAll("input")
 const expenseContainer = document.querySelector(".Add_expense");
 const ExpenseData = document.querySelector(".ExpenseData");
- let expenseData = [];
+ let expenseData = []
+  let optionData = [];
+   /* || shecking if there is a selection option in the local starage */
+  optionData= localStorage.getItem("option") ? JSON.parse(localStorage.getItem("option")) : [];
+    selectButton.forEach((selected, index) => {
+         selected.innerHTML = optionData[index];
 
- /* || data display  */
-function datas(){
-    let datas = "";
+    })
+   
+
+ function count(){
+   let amount = 50;
+   let count = 0;
+   /* || looping through the option button to check if it's selected */
+   selectButton.forEach(option => {
+      if (option.innerHTML === "Selected") {
+        count = count + amount
+     }
+       ;
+   });
+   return count;
+ }
+
+   selectButton.forEach(option => {
+     option.addEventListener("click", () => {
+       option.innerHTML = option.innerHTML === "Selected" ? "Select" : "Selected";
+       localStorage.removeItem("option");
+       optionData = [];
+
+      selectButton.forEach(btn => {
+       optionData.push(btn.innerHTML);
+       localStorage.setItem("option", JSON.stringify(optionData));
+       console.log(optionData);
+       count();
+
+     });
+   });
+})
+/* || data display  */
   expenseData = localStorage.getItem("expenseData") ? JSON.parse(localStorage.getItem("expenseData")) :[]
+function datas(){
+       let datas = "";
   expenseData.map((data) => {
     datas +=`  
     <div class ="dataContainer" onclick="ClickExpense(${expenseData.indexOf(data)})"> 
@@ -103,9 +141,7 @@ form.addEventListener("submit", (e) => {
       
 });
 
- function localStorageData( data , key) {
-    localStorage.setItem(key ="expenseData", JSON.stringify(data));
-}
+
 /* ||Add expenses using the navbar  */
 AddExpenceNav.addEventListener("click" , (callBack))
 
