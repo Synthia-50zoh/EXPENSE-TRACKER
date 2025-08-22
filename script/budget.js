@@ -16,7 +16,7 @@ const expenseContainer = document.querySelector(".Add_expense");
 const ExpenseData = document.querySelector(".ExpenseData");
  let totalexpense = 0;
  let expenseData = []
-  let optionData = [];
+  let optionData = ['Select', 'Select', 'Select', 'Select', 'Select'];
 
 
 
@@ -34,7 +34,7 @@ const ExpenseData = document.querySelector(".ExpenseData");
    }
 UserInformation();
    /* || shecking if there is a selection option in the local starage */
-  optionData= localStorage.getItem("option") ? JSON.parse(localStorage.getItem("option")) : [];
+   if (localStorage.getItem("option")) optionData = JSON.parse(localStorage.getItem("option"));
     selectButton.forEach((selected, index) => {
          selected.innerHTML = optionData[index];
 
@@ -66,6 +66,7 @@ UserInformation();
 
      });
    });
+   
 })
 /* || data display  */
   expenseData = localStorage.getItem("expenseData") ? JSON.parse(localStorage.getItem("expenseData")) :[]

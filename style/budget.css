@@ -12,16 +12,15 @@ body{
  flex-direction: column;
  align-items: center;
  justify-content: center;
- height: 100vh;
+
 }
 /* header by precious */
 header{
-    max-width: 1470px;
     width: 100%;
 }
 nav{
     display: flex;
-    max-width: 90%;
+    max-width: 80%;
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -69,9 +68,8 @@ h2{
     gap: .5rem;
 }
 .expenseContainer{
-
-       width: 100%;
-   max-width: 35%;
+    width: 100%;
+   max-width: 45%;
    min-width: 200px;
    min-height: 70vh;
    max-height: 70vh;
@@ -81,14 +79,20 @@ h2{
    align-items: center;
    flex-direction: column;
    gap: 3rem;
-   
+} 
+   .flexExpens{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
 }
+
 .budSec{
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
     padding: 1rem;
+    gap: 1rem;
 }
 .Description{
     color: #FFE600;
@@ -220,22 +224,30 @@ select{
 
 .SpendsAndAmoutLeft{
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 80%;
     gap: 1rem;
 }
+ .spent h2,
+.available h2{
+    font-size: 16px;
+}
 .SpendsAndAmoutLeft .available ,
 .SpendsAndAmoutLeft .spent{
- max-width: 50%;
- min-width: 160px;
+ max-width: 45%;
+ min-width: 150px;
+ height: 6rem;
  width: 100%;
  background-color: #1E1E1E;
  color: white;
  text-align: center;
- font-size: 14px;
+ font-size: 10px;
  display: flex;
+ align-items: center;
+ justify-content: center;
  flex-direction: column;
- gap: .5rem;
- padding: .5rem;
+ gap: .2rem;
  border-radius: 10px;
 }
 /* || chart  */
@@ -261,9 +273,11 @@ select{
 }
 .SpendsAndAmoutLeft .available span{
     color: #51D289;
+    font-size: 30px;
 }
 .SpendsAndAmoutLeft .spent span{
     color:#FFE600 ;
+    font-size: 30px;
 }
 .UserButtons{
     display: flex;
@@ -284,29 +298,33 @@ select{
     width: 90%;
 }
 .BudgetSections{
+    max-width: 85%;
+    padding-top: 1rem;
      width: 100%;
      display: flex;
      align-items: center;
      margin: auto;
      justify-content: center;
      gap: 1rem;
+     margin: auto;
 
 }
+/* ||||||||||||||||||||||||||| */
 .CardContainer{
    width: 100%;
    max-width: 25%;
    min-width: 400px;
-   min-height: 70vh;
-   max-height: 70vh;
+   min-height: 700px;
    height: 100%;
    background-color: white;
+   justify-content: space-between;
    color: black;
    padding: 1rem;
    border-radius: 15px;
    display: flex;
    align-items: center;
    flex-direction: column;
-   gap: 1rem;
+   gap: .5rem;
 }
 /* || universal buttons */
  button{
@@ -320,12 +338,14 @@ select{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem;
+    height: 4rem;
+    gap: 1rem;
+    padding: 1rem;
 }
 .Option img{
  width: 70px;
  height: 70px;
- border: solid #51D289 .6rem;
+ border: solid #51D289 .2rem;
  border-radius: 50%;
 }
  hr{
@@ -338,13 +358,15 @@ select{
 .Optioncontianer{
     text-align: center;
     width: 80%;
-    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
     min-width: 300px;
     color: black;
     background-color: #FFFDE7;
     border-radius: 10px;
     padding: .5rem;
-    margin: auto;
 }
 .CardOptions{
     text-align: center;
@@ -352,21 +374,37 @@ select{
     flex-direction: column;
     color: black;
     align-items: center;
+    padding: .5rem;
     
+
 }
+.CardOptions .choice{
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 17px;
+    font-family: sans-serif;
+    font-weight: 600;
+    background-color: #1E1E1E;
+}
+.UserGoals h2{
+    color: black;
+}
+
 .Optioncontianer button{
   background-color: #51D289;
   padding: .5rem;
   border-radius: 25px;
 }
 .UserGoals{
-    min-height: 5px;
     width: 80%; 
 }
 .UserGoals div{
  border-left: solid #51D289 .6rem;
- margin-top: 1rem;
+ margin-top: .1rem;
  height: 40px;
+ display: flex;
+ height: 5rem;
+ align-items: center;
  max-width: 400px;
  padding-left: .6rem;
  border-radius: 15px;
@@ -406,7 +444,13 @@ select{
         padding: 10Px;
         height: 4rem;
       }
-
+.flexExpens{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+     gap: 1rem;
+   
+}
 
      .Add_expense h2 {
         margin-bottom: 20px;
@@ -445,4 +489,113 @@ select{
  }
  .activeflex{
     display:flex;
+ }
+ @media all and (max-width: 1204px) {
+     header{
+      border-bottom: solid white 1px;
+     }
+   nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: start;
+    margin: auto;
+    border: none;
+     padding-bottom: 1rem;
+}
+ .welEx img ,.newEx {
+    display: block;
+ }
+ .BudgetSections{
+     width: 100%;
+     display: flex;
+     align-items: center;
+     flex-direction: column-reverse;
+     margin: auto;
+     justify-content: center;
+     gap: 1rem;
+
+}
+ .flexExpens{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+.expenseContainer{
+   width: 100%;
+   min-width: 100%;
+   min-height: 70vh;
+   max-height: 70vh;
+   height: 100%;
+   border-bottom: solid white 1px;
+   background-color: black;
+   padding: 1rem;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   gap: 3rem;
+   
+ }
+}
+  @media all and (max-width: 480px) {
+   nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: start;
+    margin: auto;
+     border-bottom: solid white 1px;
+     padding-bottom: 1rem;
+}
+ .welEx img ,.newEx {
+    display: none;
+ }
+ .BudgetSections{
+     width: 100%;
+     display: flex;
+     align-items: center;
+     flex-direction: column-reverse;
+     margin: auto;
+     justify-content: center;
+     gap: 1rem;
+
+}
+.expenseContainer{
+   width: 100%;
+   min-width: 100%;
+   min-height: 70vh;
+   max-height: 70vh;
+   height: 100%;
+   background-color: black;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   gap: 3rem;
+   
+}
+.flexExpens{
+    display: flex;
+    flex-direction: column;
+     gap: 1rem;
+    width: 100%;
+}
+.CardContainer{
+   width: 100%;
+   max-width: 25%;
+   min-width: 400px;
+   min-height: 700px;
+   height: 100%;
+   background-color: white;
+   justify-content: space-between;
+   color: black;
+   padding: 1rem;
+   border-radius: 15px;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   gap: .5rem;
+}
+  
  }
