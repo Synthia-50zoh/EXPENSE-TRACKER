@@ -1,31 +1,52 @@
- import localStorageData from "../script/utility/localstarage.js";
+ import { calculateTotal } from "./utility/caculater.js";
+ import { UserlocalStorageData } from "./utility/glabal.js";
+ const spents = document.querySelector(".spents");
 const form = document.querySelector("form");
 const AddExpense = document.querySelector(".AddExpence ");
 const AddExpenceNav= document.querySelector(".AddExpenceData");
 const selectButton = document.querySelectorAll(".selectButton");
 const exitIcons = document.querySelector(".exit-icons");
+const UserName = document.querySelector(".UserName");
+const incomeAmount = document.querySelector(".incomeAmount");
+const goal = document.querySelector(".goal");
 const actions = document.querySelector(".actions");
 const resetButton = document.querySelector(".UserButtonsReset")
 const input  = document.querySelectorAll("input")
 const expenseContainer = document.querySelector(".Add_expense");
 const ExpenseData = document.querySelector(".ExpenseData");
+ let totalexpense = 0;
  let expenseData = []
   let optionData = [];
+
+
+
+   
+    /* User information function */
+   function UserInformation(user) {
+       const userData = UserlocalStorageData(user);
+
+       if (userData.length > 0) {
+           UserName.innerHTML = `Welcome ${userData[1]}`;
+           incomeAmount.innerHTML = `£${userData[0]}.00`;
+           goal.innerHTML = userData[2];
+       }
+       return userData[0];
+   }
+UserInformation();
    /* || shecking if there is a selection option in the local starage */
   optionData= localStorage.getItem("option") ? JSON.parse(localStorage.getItem("option")) : [];
     selectButton.forEach((selected, index) => {
          selected.innerHTML = optionData[index];
 
     })
-   
 
  function count(){
-   let amount = 50;
+   let amount = 25;
    let count = 0;
    /* || looping through the option button to check if it's selected */
    selectButton.forEach(option => {
       if (option.innerHTML === "Selected") {
-        count = count + amount
+        count +=  amount
      }
        ;
    });
@@ -37,12 +58,11 @@ const ExpenseData = document.querySelector(".ExpenseData");
        option.innerHTML = option.innerHTML === "Selected" ? "Select" : "Selected";
        localStorage.removeItem("option");
        optionData = [];
-
+       datas();
       selectButton.forEach(btn => {
        optionData.push(btn.innerHTML);
        localStorage.setItem("option", JSON.stringify(optionData));
-       console.log(optionData);
-       count();
+     
 
      });
    });
@@ -71,8 +91,18 @@ function datas(){
          </div>
 
       </div>`
-  
+
+    totalexpense +=  eval(data.amount);
+
+
+
+
   });
+  
+      let totalExpenseOption = totalexpense + count();
+      spents.innerHTML = `£${totalExpenseOption}.00`;
+      totalexpense=0;
+      console.log(totalExpenseOption);
      ExpenseData.innerHTML = datas;
 
     }
@@ -84,7 +114,7 @@ function datas(){
 /* | delet expense function  */
 function DeleteExpense(id) {
      let NewArray =[]
-    expenseData.forEach((item) => {
+    expenseData.forEach((item , index) => {
         if (expenseData.indexOf(item) !== id) {
             NewArray.push(item)
         }
@@ -98,6 +128,7 @@ window.DeleteExpense = DeleteExpense
 /* || reset expenses function */
  resetButton.addEventListener("click", () => {
     localStorage.removeItem("expenseData");
+     datas();
  if(expenseData.length >=1){
     ExpenseData.innerHTML = ` <p class="budget">Your data have been <span class="expens">Reset.</span></p>
      ` } 
@@ -140,7 +171,9 @@ form.addEventListener("submit", (e) => {
         datas();
       
 });
-
+ function localStorageData( data ) {
+    localStorage.setItem("expenseData", JSON.stringify(data));
+}
 
 /* ||Add expenses using the navbar  */
 AddExpenceNav.addEventListener("click" , (callBack))
@@ -155,3 +188,4 @@ function callBack(){
      console.log("clicked")
       expenseContainer.classList.toggle("active");
 }
+ console.log(calculateTotal( UserInformation() , count ));
